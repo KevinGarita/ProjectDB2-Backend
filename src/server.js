@@ -1,6 +1,6 @@
 const app = require('./app');
 require('./router');
-const debug = require('debug');
+//const debug = require('debug');
 const http = require('http');
 const config = require('./config/env.config');
 
@@ -47,6 +47,6 @@ function onError(error) {
 * Event listener for HTTP server "listening" event.
 */
 function onListening() {
-    debug('Listening on ' + app.get('port'));
+    //debug('Listening on ' + app.get('port'));
     console.log("Listening on port " + app.get('port'));
 }
