@@ -1,6 +1,6 @@
 const app = require('./app');
 require('./router');
-const debug = require('debug')('AccessibilityMap-Backend:server');
+const debug = require('debug');
 const http = require('http');
 const config = require('./config/env.config');
 
