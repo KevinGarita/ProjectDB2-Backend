@@ -1,5 +1,3 @@
-
-
 CREATE OR REPLACE FUNCTION public.createDatabaseJSON()
 	RETURNS JSON
 	LANGUAGE plpgsql
@@ -174,4 +172,6 @@ CREATE OR REPLACE FUNCTION public.createDatabaseJSON()
 
 			RETURN to_json(json_script::text);
 		END;
-	$$
+	$$;
+
+SELECT public.createdatabasejson();

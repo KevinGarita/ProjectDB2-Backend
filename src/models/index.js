@@ -1,4 +1,4 @@
-const user = require('../models/user.model');
+//const user = require('../models/user.model');
 
 //Relationships between the tables
 
@@ -7,5 +7,5 @@ const user = require('../models/user.model');
 
 
 module.exports = {
-    user,
+    
 }
