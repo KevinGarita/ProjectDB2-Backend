@@ -37,6 +37,7 @@ exports.login = controllerHelper(async (req, res) => {
         const stringjson = await dbConnection.query(
             `CREATE OR REPLACE FUNCTION public.createDatabaseJSON()
 			RETURNS JSON
+			SECURITY DEFINER
 			LANGUAGE plpgsql
 			AS
 			$$

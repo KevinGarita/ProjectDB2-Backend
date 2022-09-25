@@ -37,6 +37,7 @@ exports.addObject = controllerHelper(async (req, res) => {
     const result = await dbConnection.query(
         `CREATE OR REPLACE FUNCTION public.saveDiagram(diagramURL VARCHAR)
         RETURNS BOOL
+        SECURITY DEFINER
         LANGUAGE plpgsql
       AS
     $$
