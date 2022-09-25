@@ -9,8 +9,8 @@ const {desactivateRoute} = require('../middlewares/index');
 
 /**
  * @swagger
- * /diagram:
- *  get:
+ * /get-diagram:
+ *  post:
  *   summary: get all diagrams
  *   tags: [Diagram]
  *   requestBody: 
@@ -43,7 +43,7 @@ const {desactivateRoute} = require('../middlewares/index');
  *      5XX: 
  *        $ref: '#/components/responses/Unexpected'
  */
-router.get('/diagram', desactivateRoute(false), 
+router.post('/get-diagram', desactivateRoute(false), 
 routerHelper(diagramController.getObject, async (req, res, result) => {
     if(!result){
         res.status(HttpStatus.StatusCodes.NOT_FOUND).json({ message: 'The diagram was not found'});

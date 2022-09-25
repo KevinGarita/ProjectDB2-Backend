@@ -14,7 +14,7 @@ function routerHelper(controllerFunction, callback) {
                 }
             })
             .catch(err => {
-                //console.log(err)
+                console.log(err)
                 if(err.errors && err.errors[0]){
                     res.status(HttpStatus.StatusCodes.BAD_REQUEST).json({
                         message: err.message,
